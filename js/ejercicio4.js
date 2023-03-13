@@ -11,8 +11,13 @@ function esPar(numero){
     }
     return mensaje;
 }
-
-let num = parseInt(prompt('Ingrese un número'));
+let num;
+do{
+    num = parseInt(prompt('Ingrese un número'));
+    if (isNaN(num)) {
+        alert('Ingrese un número válido');
+    }  
+}while(isNaN(num));
 
 document.write(`<h4>El número ${num} ${esPar(num)}</h4>`);
 
