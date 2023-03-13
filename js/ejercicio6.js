@@ -7,8 +7,17 @@ function calcularPerimetro (a, b){
     return(perimetro);
 }
 
-let base = parseInt(prompt('Ingrese el valor de la base del rectángulo'));
-let altura = parseInt(prompt('Ingrese el valor de la altura del rectángulo'));
+let base;
+let altura;
+
+do{
+    base = parseInt(prompt('Ingrese el valor de la base del rectángulo'));
+    altura = parseInt(prompt('Ingrese el valor de la altura del rectángulo'));
+    if (isNaN(base) || (isNaN(altura))) {
+        alert('Ingrese un número válido');
+    }  
+}while(isNaN(base)||(isNaN(altura)));
+
 
 document.write('<h3>Perímetro de un rectángulo</h3>');
 document.write(`<h4>Base: ${base}</h4>`);
