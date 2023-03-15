@@ -36,9 +36,9 @@ document.write(arraySuma);
 
 document.write(`<h3>Elementos repetidos del array</h3>`);
 let contadores = [0,0,0,0,0,0,0,0,0,0,0,0,0];
-for (var i = 2; i < contadores.length; i++) {
+for (let i = 2; i < contadores.length; i++) {
 
-    for (var j = 0; j <arraySuma.length; j++) {
+    for (let j = 0; j <arraySuma.length; j++) {
       if (i == arraySuma[j]) {
         contadores[i] = contadores[i] + 1;
       }
